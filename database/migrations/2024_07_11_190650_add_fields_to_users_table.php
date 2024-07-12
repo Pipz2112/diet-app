@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('elytica_service_token')->nullable();
+            $table->longText('elytica_service_token')->nullable();
             $table->unsignedBigInteger('elytica_service_id')->nullable();
-            $table->string('elytica_service_refresh_token')->nullable();
+            $table->longText('elytica_service_refresh_token')->nullable();
             $table->unsignedBigInteger('elytica_service_expires_in')->nullable();
             $table->string('password')->nullable()->change();
         });
